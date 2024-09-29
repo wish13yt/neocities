@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif; /* Choose a base font */
+}
+
+#freakyText {
+  text-decoration: underline overline line-through; /* Simulate a distorted effect */
+  letter-spacing: 2px; /* Add spacing between letters */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}

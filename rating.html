@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Rating</title>
+  <style>
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: black;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Rating</h1>
+
+  <p>Please rate this website from 1 to 10, with 1 being the lowest and 10 being the highest.</p>
+
+  <form action="/submit-rating" method="post">
+    <input type="number" name="rating" min="1" max="10">
+    <input type="submit" value="Submit">
+  </form>
+ this is broken!! come back later :D
+  <script>
+    // This function will be called when the user submits their rating.
+    function submitRating(rating) {
+      // Send the rating to the server.
+      // ...
+
+      // Update the rating on the page.
+      var ratingDots = document.getElementById("rating").querySelectorAll(".dot");
+
+      for (var i = 0; i < ratingDots.length; i++) {
+        ratingDots[i].style.visibility = (i < rating) ? "visible" : "hidden";
+      }
+    }
+
+    // Submit the rating form when the user enters a rating and presses enter.
+    document.querySelector("input[name='rating']").addEventListener("keypress", function(event) {
+      if (event.keyCode === 13) {
+        submitRating(this.value);
+      }
+    });
+  </script>
+</body>
+</html>

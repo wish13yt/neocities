@@ -1,0 +1,13 @@
+/* stolen from bluetails.neocities.org /*
+#demo {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  background-color: #ffec96;
+  position: absolute;
+  cursor: move;
+}
+
+.p2 {
+  font-family: Arial;
+}
